@@ -1,0 +1,731 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script type="text/javascript" src="JS/Slider/slider.js"></script>
+    <script type="text/javascript" src="JS/Menu/menu.js"></script>
+    <script type="text/javascript" src="JS/Menu/mobileFooterMenu.js"></script>
+    <script type="text/javascript" src="JS/Menu/mobileHeaderMenu.js"></script>
+    <script type="text/javascript" src="JS/Validation/contactValidation.js"></script>
+    <script type="text/javascript" src="JS/Validation/newsLetterValidation.js"></script>
+    <script type="text/javascript" src="JS/Validation/validation.js"></script>
+    <link rel="stylesheet" type="text/css" href="Styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+</head>
+<body class="body_scroll">
+<section class="header">
+        <nav class="header_top_nav">
+            <ul class="header_ul_top_left">
+                <li class="header_top_li_1"><a class="header_top_li_1_a" href="https://www.cosentino.com/es/silestone/">SILESTONE</a></li>
+                <li class="header_top_li_1"><a class="header_top_li_1_a" href="https://www.cosentino.com/es/dekton/">DEKTON</a></li>
+                <li class="header_top_li_1"><a class="header_top_li_1_a" href="https://www.cosentino.com/es/sensa/">SENSA</a></li>
+                <li class="header_top_li_1"><a class="header_top_li_1_a" href="https://www.cosentino.com/es/piedra-natural/">NATURAL STONE</a></li>
+            </ul>
+            <ul class="header_ul_top_right">
+                <li class="header_top_li_1">
+                    <a class="header_top_li_1_a" href="">
+                        <svg class="searchbox-lupa" width="20px" height="20px" viewBox="0 0 20 20"> <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <path d="M12.7002,2.3858 C9.8522,-0.4622 5.2342,-0.4622 2.3872,2.3858 C-0.4618,5.2348 -0.4618,9.8518 2.3872,12.6998 C5.2342,15.5478 9.8522,15.5478 12.7002,12.6998 C15.5492,9.8518 15.5492,5.2348 12.7002,2.3858 Z" id="Stroke-1" stroke="#2D2D2D" stroke-width="0.5"></path> <path d="M12.8916,12.5088 L19.0026,18.6208" id="Stroke-3" stroke="#2D2D2D" stroke-width="0.5"></path> </g> </svg>
+                    </a>
+                    <input type="text" class="header_top_li_1_input">
+                </li>
+                <li class="header_top_li_1"><a class="header_top_li_1_a" href="">Noticias</a></li>
+                <li class="header_top_li_1"><a class="header_top_li_1_a" href="">Empleo</a></li>
+                <li class="header_top_li_1"><a class="header_top_li_1_a" href="">Garantía</a></li>
+                <li class="header_top_li_1"><a class="header_top_li_1_a" href="">Contacto</a></li>
+                <li class="header_top_li_1"><a class="header_top_li_1_a" title="Lengua/País" href=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Flag_of_the_Basque_Country.svg/255px-Flag_of_the_Basque_Country.svg.png" class="language_icon" alt="Idioma"></a></li>
+            </ul>
+        </nav>
+</section>
+<header class="real_header">
+    <div class="header_bot">
+        <div class="header_bot_nav">
+            <div class="header_fixed_logo"">
+                <a class="logo_a" href="https://www.cosentino.com/es/soluciones-arquitectonicas/">
+                    <h1>Cosentino</h1>
+                    <img src="https://www.cosentino.com/es/wp-content/themes/cosentino-theme/img/logos/logo-cosentino.png" alt="">
+                </a>
+            </div>
+            <div class="header_menu_icon_div" onclick="onHeaderMenuClick(this)">
+                <div class="header_menu_icon"></div>
+                <div class="header_menu_icon"></div>
+                <div class="header_menu_icon"></div>
+            </div>
+        </div>
+        <div class="header_bot_div">
+            <div class="header_bot_div_logos">
+                <div class="header_logos_row_img">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAV1BMVEUAAAD///9kZGTp6enj4+Ojo6OHh4eWlpZNTU3ExMTw8PB3d3f7+/vAwMBxcXFdXV3c3NwmJibKysoQEBBpaWlvb28bGxshISH09PSKioqnp6czMzNHR0eL2Q07AAABcElEQVR4nO3b60rDUBCF0dZ6ra3Ver+8/3MK1T9pAlXcMqOs9QT5OMOEE8hsBgAAAAAAAAAAAAAAAMCftFku0q5vqqMGjuZx2+qmoV8ovKxuGsoXLh+rm4byhRfVSXvyhc2GNF/4dFudtCde2G1I84XdhjReuKoOGkkXrquDRtKF7YY0XLiaV/eMhc+w3SaNF95V94yFp7Q6Z0K2sN8mTRfeV+dMiBYuH6pzJkQLOw5ptrDhJs0Wdrvdf0gWNnzdz7KFV9Uxk4KFLTdptLDlJo0W9hzSYGG7T1CfcoU9N2mucNV1SHNn2PHitHO4cH36Fc8drxU7hwvPqh/xhxQq7E+hwv4UKuxPocL+FCrsT6HC/hQq7E+hwv4UKuxPocL+FCrs73Dh9uSbXl6rowZ+4Q/L+Xl11IBChQrrKVSosJ5ChQrrKVSosJ5ChQrrKVSosJ5ChQrr/f/CzeI4bfFWHQUAAAAAAAAAAAAAAAAAQFfvdywhE+/dOBIAAAAASUVORK5CYII=" alt="cosentino">
+                    <p class="header_logos_row_img_p">Cosentino</p>
+                </div>
+                <div class="header_logos_row_img">
+                    <img src="https://image.freepik.com/free-vector/abstract-s-logo-design_8586-76.jpg" alt="cosentino">
+                    <p class="header_logos_row_img_p">Silestone</p>
+                </div>
+                <div class="header_logos_row_img">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAaVBMVEX///9IaXw8YXVEZnppg5JAZHiQoawzW3Hx8/W0v8Y2XXI1XHL7/PxGZ3v3+Pk6X3SdrLXq7e9ScYPf5Oe+yM5zipitucGzv8aisLlthZR8kZ7Cy9GGmaXY3uKLnaiYqLJeeovN1NlOboDX7yqFAAAEmElEQVR4nO3djZKiOhAFYAjEaBSCivg/iu//kBdnr1uz7lQts9vH7to93wtMnQkG6CRNlhERERERERERERERERER0b9r2bfbmZS2X2rneTJtVjElJyaleGum2qk+aIKrcmGVCzvtXA/1NUnH+yaVC+1s7+qbxwTMc7/SDvduDwuY5+6gnW6wjbiAeR567XzZAjiCg0L/Op2BZpmHqD6I+wKb0E+0E86xAfPiqhxwCZ1n8vuNX/meuEYnzEPNhFjTgE7otZ/c0AGLUjlgdsLe8XOn/oLRg28XQf9V+Aq95XsDj95n5FxTRf0hzLIOeJ2Go3a6dxfYPTFstbP9rwuQ36KPNkbwbl3OvXDIws0Plopt2bopUxDk9zsLc8yTeipG+VmUiIjod61nzeT1mnb9mniLLo/Ja0ix2r2gktMWTvap9Eucb9EBL/CC2y+EN2zAE7xm+ksJWuxAvuOPFjtcQPjKxSjIgg66YDqSh/0UpyaGMAeub7TgNeDREqqo82bjIh0u0waUcANe5R4NVh0vrSSELVKZGcNiA0o4MfM7RG3aMDOXuhkooY1HmkGAVciNTDXFHhUQu344XjjDEmYnzbffB4fcHLa46V+n/goMODx84zYJj+Su4FJNvY+aw1igixh3x9Xc6YQsXChfswX1vNvkggcuxp7LuG06gyupREREf626vWxKA/ZvHWTNdHkKzhcmeBdW8sXhJmq/XfygiKVwSWNjpRr1nfeil2pp4SX/SRUFI17MjeBdcRMLuLZRifqJu0glNFPWf1IlodlmaWEV/1NOaGl/ZnCa+UZqMcrIMv5nokxC9DngPyC0kmE44VymRnWwm1BoDC92f4dzkYDZ0eQTzZ3UelttZYX0J1L3w+xg9DKtktQmKbPPpXI7iBqTv0TRpiilweu0cJILNovS3CgKv+Pfz8maGkb5Os0w3Rws1dqukCXT6bExUi+dveiMCRER0T+obt+uXmFPlL9O2le0yqonw99S2tc2/F8n8Ix99OJNdr/COfDevU7/LT+gNuq/O+oHxHZyXUbVK/RBai3tExsbL7+4tmdnK/VSWOs6O+eeUOcPb9rJHlDNavHdPceqPOYgML5D62igH6KhhJJ7hD4wczhvSAiaTO0kRLXjNXL8EHjSubOyn0ZsQfSZma4REdaJ0MjyIbKj8srCLxH6lYipUv3ih4A5tNfpMtd++vY5+Ije4oBpszs2Xzjhy23nTYpOpV+bi/EAPKj+Qd13F4Wee5euZ79aIiIyRbAnu/bXcz6xbkon2le/3Jna2rTez10hu0BTuPnGTscL1PctsKuCX/AGO9wVxE7Y/ZEdsFJjYhSxvb6CgfkG+70nYBu2sXpwNRHZh20c9PlD/a90ogs0lfbHZPErpNpfeMSvH4KWBS0lVJ5qlvCrdK59R0zoHVFR+00K3VJB/zuk6I4DSf0DgeBvq+dJ+yLNsi20MQbyuxWj7YGj6NV/hXeLFSyiX+lfo3f1FTTbwJvnjtcEJ35brFxA7af8HdNmFZLgcYuUwqox9RnSwbJvtzMpbW+nkkhEREREREREREREREREROb9By7CdxcI9oAtAAAAAElFTkSuQmCC" alt="cosentino">
+                    <p class="header_logos_row_img_p">Dekton</p>
+                </div>
+            </div>
+            <nav class="header_bot_div_nav">
+                <ul class="header_bot_nav_ul">
+                    <li class="header_bottom_li">
+                        <span class="header_bottom_a header_bottom_a_icon" onclick="subMenuClick(this)"><span class="header_bottom_a_span">Colores</span></span>
+                        <ul class="header_bottom_second_ul_1">
+                            <li><a class="header_bottom_second_ul_a" href="https://www.cosentino.com/es/colores/">Todo</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">Tonos</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">Silestone</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">Dekton</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">Sensa</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">Piedra Natural</a></li>
+                        </ul>
+                    </li>
+                    <li class="header_bottom_li">
+                        <span class="header_bottom_a header_bottom_a_icon" onclick="subMenuClick(this)"><span class="header_bottom_a_span">Cocinas</span></span>
+                        <ul class="header_bottom_second_ul_2">
+                            <li><a class="header_bottom_second_ul_a" href="https://www.cosentino.com/es/cocinas/">Todo</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">Encimeras de cocina</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">Suelos de cocina</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">Revestimientos de cocina</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">Fregaderos de cocina</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">Reformas de cocina</a></li>
+                        </ul>
+                    </li>
+                    <li class="header_bottom_li">
+                        <span class="header_bottom_a header_bottom_a_icon" onclick="subMenuClick(this)"><span class="header_bottom_a_span">Baños</span></span>
+                        <ul class="header_bottom_second_ul_3">
+                            <li><a class="header_bottom_second_ul_a" href="https://www.cosentino.com/es/banos/">Todo</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">Encimera de baño</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">Lavabos</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">Platos de ducha</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">Suelos de baño</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">Revestimientos de baño</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">Reformas de baño</a></li>
+                        </ul>
+                    </li>
+                    <li class="header_bottom_li">
+                        <span class="header_bottom_a header_bottom_a_icon" onclick="subMenuClick(this)"><span class="header_bottom_a_span">Soluciones Arquitectónicas</span></span>
+                        <ul class="header_bottom_second_ul_4">
+                            <li><a class="header_bottom_second_ul_a" href="https://www.cosentino.com/es/soluciones-arquitectonicas/">Todo</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">Galería de proyectos</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">Galería de baños</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">Galeria de cocinas</a></li>
+                        </ul>
+                    </li>
+                    <li class="header_bottom_li">
+                        <span class="header_bottom_a header_bottom_a_icon" onclick="subMenuClick(this)"><span class="header_bottom_a_span">Galeria</span></span>
+                        <ul class="header_bottom_second_ul_5">
+                            <li><a class="header_bottom_second_ul_a" href="https://www.cosentino.com/es/galeria/">Todo</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">Top faces</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">Top projects</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">Top trends</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">Top products</a></li>
+                        </ul>
+                    </li>
+                    <li class="header_bottom_li">
+                        <span class="header_bottom_a header_bottom_a_icon" onclick="subMenuClick(this)"><span class="header_bottom_a_span">Blog</span></span>
+                        <ul class="header_bottom_second_ul_6">
+                            <li><a class="header_bottom_second_ul_a" href="">Únete a Cosentino</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">People</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">Proceso de selección</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">Nuestro ADN</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">Nuestras personas</a></li>
+                        </ul>
+                    </li>
+                    <li class="header_bottom_li">
+                        <span class="header_bottom_a header_bottom_a_icon" onclick="subMenuClick(this)"><span class="header_bottom_a_span">Empleo</span></span>
+                        <ul class="header_bottom_second_ul_7">
+                            <li><a class="header_bottom_second_ul_a" href="">Fachadas</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">Suelos y pavimientos</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">Revestimientos</a></li>
+                            <li><a class="header_bottom_second_ul_a" href="">Reformas</a></li>
+                        </ul>
+                    </li>
+                    <li class="header_bottom_li">
+                        <a class="header_bottom_a" href="https://www.cosentino.com/es/donde-comprar/"><span class="header_bottom_a_span">Dónde Comprar</span></a>
+                    </li>
+                    <li class="header_bottom_li">
+                        <a class="header_bottom_a" href="https://pro.cosentino.com/s/?language=es&utm_campaign=COS-boton-PRO&utm_medium=referral&utm_source=cosentinoCom"><span class="header_bottom_a_span">Profesional</span></a>
+                    </li>
+                    <li class="header_bottom_li">
+                        <a class="header_bottom_a" href="https://pro.cosentino.com/s/?language=es&utm_campaign=COS-boton-PRO&utm_medium=referral&utm_source=cosentinoCom"><span class="header_bottom_a_span">Contacto</span></a>
+                    </li>
+                    <li class="header_bottom_li_last">
+                        <a class="header_bottom_li_last_a" href="https://pro.cosentino.com/s/?language=es&utm_campaign=COS-boton-PRO&utm_medium=referral&utm_source=cosentinoCom"><div class="header_bottom_li_last_a_div">Cosentino Area Profesional</div></a>
+                    </li>
+                    <li class="header_bottom_li_last">
+                        <form action="" method="get" id="form1" class="header_bottom_form">
+                            <input class="header_bottom_searcher_input" type="text" id="searcher" placeholder="buscador">
+                            <input type="submit" class="header_bottom_searcher_input_submit" value="submit">
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header_bot_div_p_rights">
+                <p class="rights rights_color"><b>Cosentino S.A. All rights reserved</b></p>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <ul class="main_first_ul">
+        <li><a class="main_first_ul_a" href="https://www.cosentino.com/es/">Cosentino</a></li>
+        <li><h2 class="main_first_ul_h2">Soluciones Arquitectónicas</h2></li>
+    </ul><!--Meter un before-->
+    <section>
+        <header class="main_first_section_header">
+            <div class="main_first_section_header_div">
+                <h2 class="main_first_section_header_h2">Soluciones Arquitectónicas</h2>
+                <p class="main_first_section_header_p">Para traducir la <b>creatividad</b> del arquitecto en un espacio, se necesita un buen equipo que <b>proporcione materiales de construcción que puedan cumplir con el diseño </b>en sus diferentes aplicaciones interiores y exteriores. En Cosentino encontrará soluciones para cada una de sus necesidades: solería, revestimientos y fachadas.</p>
+            </div>
+            <img class="main_first_section_header_picture_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2017/10/fachada-ve.jpg" alt="Portada">
+        </header>
+        <div class="main_first_section_div">
+            <div class="row">
+                <article class="row_article"> <!--A por encima del figure, figure se utiliza cuando el texto hace referencia explicita a esa img, sino article-->
+                    <a class ="row_article_a" href="https://www.cosentino.com/es/soluciones-arquitectonicas/suelos-y-pavimentos/">
+                        <div class="main_first_section_div_div">
+                            <img class="main_first_section_div_img_1" src="https://icosentino.imgix.net/es/wp-content/uploads/2017/10/Mesa-de-trabajo-16-copia@2x-3.png" alt="Revestimiento de un suelo con asfalto, adoquines, madera u otro material similar.">
+                            <div class="main_first_section_div_div_contorno"></div>
+                        </div>
+                        <h3>Soleria</h3>
+                    </a>
+                </article>
+                <article class="row_article">
+                    <a class ="row_article_a" href="https://www.cosentino.com/es/soluciones-arquitectonicas/reformas/">
+                        <div class="main_first_section_div_div">
+                            <img class="main_first_section_div_img_1" src="https://icosentino.imgix.net/es/wp-content/uploads/2017/10/reformas-1.png?auto=format%2Ccompress&amp;fit=crop?fit=crop&amp" alt="Modificación de una cosa con el fin de mejorarla.">
+                            <div class="main_first_section_div_div_contorno"></div>
+                        </div>
+                        <h3>Reformas</h3>
+                    </a>
+                </article>
+            </div>
+            <div class="row">
+                <article class="row_article">
+                    <a class ="row_article_a" href="https://www.cosentino.com/es/soluciones-arquitectonicas/revestimientos/">
+                        <div class="main_first_section_div_div">
+                            <img class="main_first_section_div_img_1" src="https://icosentino.imgix.net/es/wp-content/uploads/2017/10/reve3.png?auto=format%2Ccompress&amp" alt="Capa de algún tipo de material con la que se cubre una superficie.">
+                            <div class="main_first_section_div_div_contorno"></div>
+                        </div>
+                        <h3>Revestimientos</h3>
+                    </a>
+                </article>
+                <article class="row_article">
+                    <a class ="row_article_a" href="https://www.cosentino.com/es/soluciones-arquitectonicas/fachadas/">
+                        <div class="main_first_section_div_div">
+                            <img class="main_first_section_div_img_1" src="https://icosentino.imgix.net/es/wp-content/uploads/2017/10/Mesa-de-trabajo-16@2x-1.png?auto=format%2Ccompress&amp;fit=crop?fit=crop&amp" alt="Parte o cara visible de los muros exteriores de un edificio o de otra cosa en relación con su situación">
+                            <div class="main_first_section_div_div_contorno"></div>
+                        </div>
+                        <h3>Fachadas</h3>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section class="main_second_section">
+            <h3 class="main_second_section_h3">Contacta con nuestro equipo comercial y recibe asistencia para tu proyecto</h3>
+            <a class="main_second_section_a" href="#contact_section"><span class="div_a">Contactar</span></a> <!--Si es un PopUP o un scroll down o una acción sería button-->
+    </section>
+    <section class="main_third_section_article">
+        <h3 class="main_third_section_h3">Nuestras marcas</h3>
+        <article class="main_third_section_article_article">
+            <img src="https://icosentino.imgix.net/es/wp-content/uploads/2017/09/silestone_logo.png?auto=format%2Ccompress&amp" alt="">
+            <p>Silestone te ofrece la posibilidad de adaptarse a los espacios de interior gracias a sus variedades de formato, estándar(306x140 cm) y Jumbo (325x159 cm), perfectos para sacar el máximo provecho a tus espacios de interior. Suelos de alto tránsito, revestimientos de gran belleza visual o mobiliario son algunas de los usos en que veremos a Silestone en grandes proyectos.</p>
+            <a href="https://www.cosentino.com/es/silestone/"><span class="div_a">Ver características</span></a>
+        </article>
+        <article class="main_third_section_article_article">
+            <img src="https://icosentino.imgix.net/es/wp-content/uploads/2017/09/dekton_logo.png?auto=format%2Ccompress&amp;fit=crop" alt="Dekton">
+            <p>Gracias al tamaño y espesores de Dekton, las posibilidades de diseño crecen exponencialmente tanto en interior como exterior. Un material con unas características únicas en el mercado y con diseños pensados para adaptarse a todos los estilos. Fachadas, revestimientos, suelos, cocinas o baños. Dekton no tiene límites.</p>
+            <a href="https://www.cosentino.com/es/silestone/"><span class="div_a">Ver características</span></a>
+        </article>
+    </section>
+    <section class="main_forth_section">
+        <div class="main_forth_section_div_1">
+            <img src="https://www.cosentino.com/es/wp-content/themes/cosentino-theme/img/logos/logo-dekton.png" alt="Dekton">
+            <h3>Descubre por qué Dekton es perfecto para fachadas</h3>
+            <form method="get" id="form" onsubmit="return validateNewsLetter();">
+                <label class="main_forth_section_div_1_label_email" for="email_newsletter">
+                    <span>Email:</span>
+                    <input type="text" id="email_newsletter" class ="default_input" placeholder="xabier@on4u.es" onkeyup="checkEmail(this)" autocomplete="email" required>
+                </label>
+                <p class="main_forth_section_div_1_p">Estoy interesado en soluciones para...</p>
+                <div>
+                    <input type="radio" id="ProyectoProfesional_newsletter" name="interés" value="Proyecto profesional" required>
+                    <label for="ProyectoProfesional_newsletter">Proyecto profesional</label>
+                    <label for="MiVivienda_newsletter">
+                        <input type="radio" id="MiVivienda_newsletter" name="interés" value="Mi vivienda">Mi vivienda
+                    </label>
+                </div>
+                <label id="subscribirme_newsletter" class="main_forth_section_div_subs">
+                    <input type="checkbox" id="subscribirme_newsletter" name="subscribirme" value="Si, quiero suscribirme al blog de tendencias y que me mantengan informado sobre ventajas, promociones, eventos y demás productos de Cosentino.">Si, quiero suscribirme al blog de tendencias y que me mantengan informado sobre ventajas, promociones, eventos y demás productos de Cosentino.
+                </label id="aceptar_newsletter">
+                <label>
+                    <input onclick="changeCursorPointerNewsLetter();" type="checkbox" id="aceptar_newsletter" name="aceptar" value="Acepto la Política de Privacidad y la Cláusula de Contacto">Acepto la <a href="https://forms.cosentino.com/politica-de-privacidad/">Política de Privacidad</a> y la <a href="https://forms.cosentino.com/clausula-formulario-de-contacto-y-descargas/">Cláusula de Contacto</a>
+                </label>
+                <input type="submit" value="Enviar" id="submit_newsletter" class="div_a_disabled" required disabled>
+            </form>
+        </div>
+        <img class="main_forth_section_div_2_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2018/02/cover-references.png?auto=format%2Ccompress&amp" alt="">
+    </section>
+    <section class="main_fifth_section">
+        <header class="main_fifth_section_header">
+            <h3>Ven y descubre nuestra red global de distribución</h3>
+            <p>En los más de 20 países en los que Grupo Cosentino tiene presencia, la distribución se lleva a cabo con una innovadora red de Cosentino Centers. Hoy, la multinacional cuenta con más de 110 distribuidores por todo el mundo.</p>
+        </header>
+        <div class="main_fifth_section_div">
+            <article class="main_fifth_section_div_article">
+                <h3>Cosentino City</h3>
+                <p>Los Cosentino City son espacios configurados para fomentar la relación entre Cosentino y los <b>diseñadores</b> y <b>arquitectos</b> en un <b>área social y dinámica</b> donde todos hablan el mismo idioma.</p>
+                <img src="https://icosentino.imgix.net/es/wp-content/uploads/2017/05/fachada_cosentino_city_montreal-495x400-400x400.jpg" alt="Tienda física de Consentino">
+                <a href="https://www.cosentino.com/es/cosentino-city/"><span class="div_a">Encuentra tu Cosentino City más cercano</span></a>
+            </article>
+            <article class="main_fifth_section_div_article">
+                <h3>Cosentino Center</h3>
+                <p>Los Cosentino Centers son un ejemplo del <b>compromiso total</b> de la compañía con los clientes, combinando las funciones de <b>almacén, exposición de marca y producto y red de distribución.</b></p>
+                <img src="https://icosentino.imgix.net/es/wp-content/uploads/2018/03/center-400x400.jpg" alt="Almacén de Consentino">
+                <a href="https://www.cosentino.com/es/cosentino-city/"><span class="div_a">Encuentra tu Cosentino Center más cercano</span></a>
+            </article>
+        </div>
+    </section>
+    <section class="main_sixth_section">
+        <h3>Encuentra inspiración para tu próximo proyecto</h3>
+        <!--SLICK-->
+        <section id="slide">
+            <div class="slide_class">
+                <div class="slide_class_div">
+                    <img class="slide_class_img" src="https://assetstools.cosentino.com/api/v1/bynder/image/61C96A3C-E07C-407E-A77C5A3C393159A9/dekton-living-room-nilium.jpg?auto=compress%2Cformat&w=250&h=250&fit=crop" alt="">
+                    <div class="slide_class_div_logos">
+                        <img class="slide_class_div_logos_img_1" src="https://icons-for-free.com/iconfiles/png/512/internet+logo+picasa+technology+video+website+icon-1320192798557464160.png" alt="">
+                        <ul class="slide_class_div_logos_ul">
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconFacebook.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/inconTwitter.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconLinkedin.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide_class_div">
+                    <img class="slide_class_img" src="https://assetstools.cosentino.com/api/v1/bynder/image/8EF6DE6A-6F63-4541-96E1C3CBC083DB7A/dekton-outdoor-radium-blanc-concrete.jpg?auto=compress%2Cformat&w=250&h=250&fit=crop" alt="">
+                    <div class="slide_class_div_logos">
+                        <img class="slide_class_div_logos_img_1" src="https://icons-for-free.com/iconfiles/png/512/internet+logo+picasa+technology+video+website+icon-1320192798557464160.png" alt="">
+                        <ul class="slide_class_div_logos_ul">
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconFacebook.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/inconTwitter.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconLinkedin.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide_class_div">
+                    <img class="slide_class_img" src="https://assetstools.cosentino.com/api/v1/bynder/image/615AD440-BCD4-4BB4-A83EE1FC8293DBE7/dekton-fachada-concepto-orix-blanc-concrete.jpg?auto=compress%2Cformat&w=250&h=250&fit=crop" alt="">
+                    <div class="slide_class_div_logos">
+                        <img class="slide_class_div_logos_img_1" src="https://icons-for-free.com/iconfiles/png/512/internet+logo+picasa+technology+video+website+icon-1320192798557464160.png" alt="">
+                        <ul class="slide_class_div_logos_ul">
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconFacebook.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/inconTwitter.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconLinkedin.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide_class_div">
+                    <img class="slide_class_img" src="https://assetstools.cosentino.com/api/v1/bynder/image/759C3DF7-C45C-42B4-B8B13E72844AE2DB/aura-15.jpg?auto=compress%2Cformat&w=250&h=250&fit=crop" alt="">
+                    <div class="slide_class_div_logos">
+                        <img class="slide_class_div_logos_img_1" src="https://icons-for-free.com/iconfiles/png/512/internet+logo+picasa+technology+video+website+icon-1320192798557464160.png" alt="">
+                        <ul class="slide_class_div_logos_ul">
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconFacebook.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/inconTwitter.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconLinkedin.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide_class_div">
+                    <img class="slide_class_img" src="https://assetstools.cosentino.com/api/v1/bynder/image/F4BC47A2-13AB-4D01-B5840743D9B0B5BE/sirius.jpg?auto=compress%2Cformat&w=250&h=250&fit=crop" alt="">
+                    <div class="slide_class_div_logos">
+                        <img class="slide_class_div_logos_img_1" src="https://icons-for-free.com/iconfiles/png/512/internet+logo+picasa+technology+video+website+icon-1320192798557464160.png" alt="">
+                        <ul class="slide_class_div_logos_ul">
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconFacebook.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/inconTwitter.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconLinkedin.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide_class_div">
+                    <img class="slide_class_img" src="https://assetstools.cosentino.com/api/v1/bynder/image/3030756A-8570-47BB-8287AAA4ED7DE209/nar-fine-carpentrys-dekton-sail-lounge.jpg?auto=compress%2Cformat&w=250&h=250&fit=crop" alt="">
+                    <div class="slide_class_div_logos">
+                        <img class="slide_class_div_logos_img_1" src="https://icons-for-free.com/iconfiles/png/512/internet+logo+picasa+technology+video+website+icon-1320192798557464160.png" alt="">
+                        <ul class="slide_class_div_logos_ul">
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconFacebook.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/inconTwitter.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconLinkedin.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide_class_div">
+                    <img class="slide_class_img" src="https://assetstools.cosentino.com/api/v1/bynder/image/585B79B6-3FFA-4FCD-A2E505A83DCBFC36/casa-cor-keon.jpg?auto=compress%2Cformat&w=250&h=250&fit=crop" alt="">
+                    <div class="slide_class_div_logos">
+                        <img class="slide_class_div_logos_img_1" src="https://icons-for-free.com/iconfiles/png/512/internet+logo+picasa+technology+video+website+icon-1320192798557464160.png" alt="">
+                        <ul class="slide_class_div_logos_ul">
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconFacebook.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/inconTwitter.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconLinkedin.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide_class_div">
+                    <img class="slide_class_img" src="https://assetstools.cosentino.com/api/v1/bynder/image/15D63E4B-52FC-4F41-88293A503711CDA4/casa-cor.jpg?auto=compress%2Cformat&w=250&h=250&fit=crop" alt="">
+                    <div class="slide_class_div_logos">
+                        <img class="slide_class_div_logos_img_1" src="https://icons-for-free.com/iconfiles/png/512/internet+logo+picasa+technology+video+website+icon-1320192798557464160.png" alt="">
+                        <ul class="slide_class_div_logos_ul">
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconFacebook.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/inconTwitter.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconLinkedin.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide_class_div">
+                    <img class="slide_class_img" src="https://assetstools.cosentino.com/api/v1/bynder/image/EE3BBD29-6002-4DA6-87A90855A1EC31C2/danae.jpg?auto=compress%2Cformat&w=250&h=250&fit=crop" alt="">
+                    <div class="slide_class_div_logos">
+                        <img class="slide_class_div_logos_img_1" src="https://icons-for-free.com/iconfiles/png/512/internet+logo+picasa+technology+video+website+icon-1320192798557464160.png" alt="">
+                        <ul class="slide_class_div_logos_ul">
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconFacebook.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/inconTwitter.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconLinkedin.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide_class_div">
+                    <img class="slide_class_img" src="https://assetstools.cosentino.com/api/v1/bynder/image/DB96954A-F422-4844-B87D08B25E403360/hillcrest.jpg?auto=compress%2Cformat&w=250&h=250&fit=crop" alt="">
+                    <div class="slide_class_div_logos">
+                        <img class="slide_class_div_logos_img_1" src="https://icons-for-free.com/iconfiles/png/512/internet+logo+picasa+technology+video+website+icon-1320192798557464160.png" alt="">
+                        <ul class="slide_class_div_logos_ul">
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconFacebook.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/inconTwitter.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconLinkedin.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide_class_div">
+                    <img class="slide_class_img" src="https://assetstools.cosentino.com/api/v1/bynder/image/61C96A3C-E07C-407E-A77C5A3C393159A9/dekton-living-room-nilium.jpg?auto=compress%2Cformat&w=250&h=250&fit=crop" alt="">
+                    <div class="slide_class_div_logos">
+                        <img class="slide_class_div_logos_img_1" src="https://icons-for-free.com/iconfiles/png/512/internet+logo+picasa+technology+video+website+icon-1320192798557464160.png" alt="">
+                        <ul class="slide_class_div_logos_ul">
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconFacebook.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/inconTwitter.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconLinkedin.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide_class_div">
+                    <img class="slide_class_img" src="https://assetstools.cosentino.com/api/v1/bynder/image/8EF6DE6A-6F63-4541-96E1C3CBC083DB7A/dekton-outdoor-radium-blanc-concrete.jpg?auto=compress%2Cformat&w=250&h=250&fit=crop" alt="">
+                    <div class="slide_class_div_logos">
+                        <img class="slide_class_div_logos_img_1" src="https://icons-for-free.com/iconfiles/png/512/internet+logo+picasa+technology+video+website+icon-1320192798557464160.png" alt="">
+                        <ul class="slide_class_div_logos_ul">
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconFacebook.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/inconTwitter.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconLinkedin.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide_class_div">
+                    <img class="slide_class_img" src="https://assetstools.cosentino.com/api/v1/bynder/image/615AD440-BCD4-4BB4-A83EE1FC8293DBE7/dekton-fachada-concepto-orix-blanc-concrete.jpg?auto=compress%2Cformat&w=250&h=250&fit=crop" alt="">
+                    <div class="slide_class_div_logos">
+                        <img class="slide_class_div_logos_img_1" src="https://icons-for-free.com/iconfiles/png/512/internet+logo+picasa+technology+video+website+icon-1320192798557464160.png" alt="">
+                        <ul class="slide_class_div_logos_ul">
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconFacebook.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/inconTwitter.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconLinkedin.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide_class_div">
+                    <img class="slide_class_img" src="https://assetstools.cosentino.com/api/v1/bynder/image/759C3DF7-C45C-42B4-B8B13E72844AE2DB/aura-15.jpg?auto=compress%2Cformat&w=250&h=250&fit=crop" alt="">
+                    <div class="slide_class_div_logos">
+                        <img class="slide_class_div_logos_img_1" src="https://icons-for-free.com/iconfiles/png/512/internet+logo+picasa+technology+video+website+icon-1320192798557464160.png" alt="">
+                        <ul class="slide_class_div_logos_ul">
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconFacebook.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/inconTwitter.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconLinkedin.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide_class_div">
+                    <img class="slide_class_img" src="https://assetstools.cosentino.com/api/v1/bynder/image/F4BC47A2-13AB-4D01-B5840743D9B0B5BE/sirius.jpg?auto=compress%2Cformat&w=250&h=250&fit=crop" alt="">
+                    <div class="slide_class_div_logos">
+                        <img class="slide_class_div_logos_img_1" src="https://icons-for-free.com/iconfiles/png/512/internet+logo+picasa+technology+video+website+icon-1320192798557464160.png" alt="">
+                        <ul class="slide_class_div_logos_ul">
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconFacebook.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/inconTwitter.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconLinkedin.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide_class_div">
+                    <img class="slide_class_img" src="https://assetstools.cosentino.com/api/v1/bynder/image/3030756A-8570-47BB-8287AAA4ED7DE209/nar-fine-carpentrys-dekton-sail-lounge.jpg?auto=compress%2Cformat&w=250&h=250&fit=crop" alt="">
+                    <div class="slide_class_div_logos">
+                        <img class="slide_class_div_logos_img_1" src="https://icons-for-free.com/iconfiles/png/512/internet+logo+picasa+technology+video+website+icon-1320192798557464160.png" alt="">
+                        <ul class="slide_class_div_logos_ul">
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconFacebook.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/inconTwitter.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconLinkedin.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide_class_div">
+                    <img class="slide_class_img" src="https://assetstools.cosentino.com/api/v1/bynder/image/585B79B6-3FFA-4FCD-A2E505A83DCBFC36/casa-cor-keon.jpg?auto=compress%2Cformat&w=250&h=250&fit=crop" alt="">
+                    <div class="slide_class_div_logos">
+                        <img class="slide_class_div_logos_img_1" src="https://icons-for-free.com/iconfiles/png/512/internet+logo+picasa+technology+video+website+icon-1320192798557464160.png" alt="">
+                        <ul class="slide_class_div_logos_ul">
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconFacebook.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/inconTwitter.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconLinkedin.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide_class_div">
+                    <img class="slide_class_img" src="https://assetstools.cosentino.com/api/v1/bynder/image/15D63E4B-52FC-4F41-88293A503711CDA4/casa-cor.jpg?auto=compress%2Cformat&w=250&h=250&fit=crop" alt="">
+                    <div class="slide_class_div_logos">
+                        <img class="slide_class_div_logos_img_1" src="https://icons-for-free.com/iconfiles/png/512/internet+logo+picasa+technology+video+website+icon-1320192798557464160.png" alt="">
+                        <ul class="slide_class_div_logos_ul">
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconFacebook.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/inconTwitter.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconLinkedin.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide_class_div">
+                    <img class="slide_class_img" src="https://assetstools.cosentino.com/api/v1/bynder/image/EE3BBD29-6002-4DA6-87A90855A1EC31C2/danae.jpg?auto=compress%2Cformat&w=250&h=250&fit=crop" alt="">
+                    <div class="slide_class_div_logos">
+                        <img class="slide_class_div_logos_img_1" src="https://icons-for-free.com/iconfiles/png/512/internet+logo+picasa+technology+video+website+icon-1320192798557464160.png" alt="">
+                        <ul class="slide_class_div_logos_ul">
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconFacebook.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/inconTwitter.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                            <li><a class="slide_class_div_logos_a" href=""><img class="slide_class_div_logos_img" src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconLinkedin.png?auto=format%2Ccompress&fit=crop" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="main_seventh_section" id="contact_section">
+        <h3 class="main_seventh_section_h3">Contacto</h3> <!--FIELDSET-->
+        <div class="main_seventh_section_div">
+            <form method="post" id="form2" onsubmit="return validateContact();">
+                <fieldset class="main_seventh_section_div_fieldset" name="InformaciónPersonal">
+                    <!--<legend></legend>-->
+                    <label class="main_seventh_section_div_fieldset_label" for="nombre_contact">
+                        <span class="main_seventh_section_span">Nombre</span>
+                        <input class ="default_input main_seventh_section_div_fieldset_input" type="text" id="nombre_contact" onkeyup="checkNull(this)" required>
+                    </label>
+                    <label class="main_seventh_section_div_fieldset_label" for="email_contact">
+                        <span class="main_seventh_section_span">E-mail</span>
+                        <input class ="default_input main_seventh_section_div_fieldset_input" type="text" id="email_contact" onkeyup="checkEmail(this)" required>
+                    </label>
+                </fieldset>
+                <fieldset class="main_seventh_section_div_fieldset" name="PerfilProfesional">
+                    <div class = "main_seventh_section_div_fieldset_label">
+                        <span class="main_seventh_section_span"><label for="selecperfil_contact">Selecciona tu perfil</label></span>
+                        <select id="selecperfil_contact" class = "default_select main_seventh_section_div_fieldset_input" required>
+                            <option value="" disabled selected hidden>Selecciona tu perfil</option>
+                            <option value="Arquitecto">Arquitecto</option>
+                            <option value="Constructor">Constructor</option>
+                            <option value="Interiorista">Interiorista</option>
+                            <option value="Marmolista">Marmolista</option>
+                            <option value="Promotor">Promotor</option>
+                            <option value="Tienda de cocina y baños">Tienda de cocina y baños</option>
+                            <option value="Instalador">Instalador</option>
+                            <option value="Proveedores">Proveedores</option>
+                            <option value="Prensa">Prensa</option>
+                            <option value="Estudiante">Estudiante</option>
+                        </select>
+                    </div>
+                    <label class ="main_seventh_section_div_fieldset_label" for="empresa_contact">
+                        <span class="main_seventh_section_span">Empresa</span>
+                        <input class ="default_input main_seventh_section_div_fieldset_input" type="text" id="empresa_contact" onkeyup="checkNull(this)" required>
+                    </label>
+                </fieldset>
+                <fieldset class="main_seventh_section_div_fieldset" name="Direccion">
+                    <div class = "main_seventh_section_div_fieldset_label">
+                        <span class="main_seventh_section_span"><label for="pais_contact">País</label></span>
+                        <select class = "default_select main_seventh_section_div_fieldset_input" id="pais_contact" required>
+                            <option value="" disabled selected hidden>Selecciona tu país</option>
+                            <option value="España">España</option>
+                            <option value="Francia">Francia</option>
+                            <option value="Portugal">Portugal</option>
+                        </select>
+                     </div>
+                    <label class ="main_seventh_section_div_fieldset_label" for="códigoPostal_contact">
+                        <span class="main_seventh_section_span">Código Postal</span>
+                        <input class ="default_input main_seventh_section_div_fieldset_input" type="text" id="códigoPostal_contact" onkeyup="checkNumeric(this)" required>
+                    </label>
+                </fieldset>
+                <fieldset class="main_seventh_section_div_fieldset" name="Motivo">
+                    <div class = "main_seventh_section_div_fieldset_label">
+                        <span class="main_seventh_section_span"><label for="selecasunto_contact">Selecciona el asunto</label></span>
+                        <select class = "default_select main_seventh_section_div_fieldset_input" id="selecasunto_contact" required>
+                            <option value="" disabled selected hidden>Selecciona el asunto</option>
+                            <option value="AsistenciaParaProyectos">Asistencia para proyectos</option>
+                            <option value="Información general de Cosentino">Información general de Cosentino</option>
+                        </select>
+                    </div>
+                    <label class ="main_seventh_section_div_fieldset_label" for="telefono_contact">
+                        <span class="main_seventh_section_span">Telefono</span>
+                        <input class ="default_input main_seventh_section_div_fieldset_input" type="text" id="telefono_contact" onkeyup="checkNumeric(this)" required>
+                    </label>
+                    <label class ="main_seventh_section_div_fieldset_label_textarea" for="mensaje_contact">
+                        <span class="main_seventh_section_span">Escribe aquí tu mensaje</span>
+                        <textarea class="default_textarea" id="mensaje_contact" rows="5" cols="33" onkeyup="checkNull(this)" required></textarea>
+                    </label>
+                </fieldset>
+                <p>De conformidad con el RGPD, le informamos que sus datos serán incorporados a un fichero bajo la responsabilidad de COSENTINO, S.A. (en adelante COSENTINO), con la finalidad de atender su solicitud y ofrecerle información relacionada con la misma. Por tanto, la base jurídica que legitima este tratamiento, será su consentimiento. El plazo de conservación de sus datos será de cinco años. Igualmente, le informamos que sus datos podrán ser comunicados a empresas del GRUPO COSENTINO cuando sea necesario para el correcto desarrollo de la relación mantenida con usted, o bien, porque nos ha solicitado algún producto o servicio concreto, y por interés legítimo, por motivos corporativos. Algunas empresas del GRUPO COSENTINO pueden estar ubicadas en terceros países, incluso en aquellos donde la legislación no exige un nivel de seguridad adecuado a criterio de la Agencia Española de Protección de Datos.</p>
+                <p>Puede ejercer sus derechos de acceso, rectificación, cancelación/supresión, oposición, limitación y portabilidad, a través de comunicación por escrito a Ctra. Baza a Huércal – Overa, Km. 59 – 04860 Cantoria (Almería), o bien a la dirección de nuestro Delegado de Protección de Datos gdpr@cosentino.com aportando fotocopia de su DNI o documento equivalente, e identificando el derecho que se solicita. Asimismo, en caso de considerar vulnerado su derecho a la protección de datos personales, podrán interponer una reclamación ante la Agencia Española de Protección de Datos (www.agpd.es).</p>
+                <label class="main_seventh_section_last_label" for="subscribirme_contact"> <!--METER FOR SIEMPRE-->
+                    <input type="checkbox" id="subscribirme_contact" name="subscribirme2" value="Si, quiero suscribirme al blog de tendencias y que me mantengan informado sobre ventajas, promociones, eventos y demás productos de Cosentino.">Si, quiero suscribirme al blog de tendencias y que me mantengan informado sobre ventajas, promociones, eventos y demás productos de Cosentino.
+                </label>
+                <label class="main_seventh_section_last_label" for="aceptar_contact">
+                    <input onclick="changeCursorPointerContact()" type="checkbox" id="aceptar_contact" name="aceptar2" value="Acepto la Política de Privacidad y la Cláusula de Contacto" required>Acepto la <a href="https://forms.cosentino.com/politica-de-privacidad/">Política de Privacidad</a> y la <a href="https://forms.cosentino.com/clausula-formulario-de-contacto-y-descargas/">Cláusula de Contacto</a>.
+                </label>
+                <input type="submit" class ="div_a_disabled" value="Enviar" id="submit_contact" onclick="location.href='#contact_section'" disabled>
+            </form>
+        </div>
+    </section>
+    <section class="main_eighth_section">
+        <h3 class="main_eighth_section_h3">Consulta nuestro blog de tendencias</h3>
+        <article class="main_eighth_section_div_article">
+            <a class="main_eighth_section_div_article_a_1" href="https://www.cosentino.com/es/noticias/doble-reconocimiento-internacional-para-dekton-slim/">
+                <img src="https://icosentino.imgix.net/es/wp-content/uploads/2019/11/IMG-6384_recoupé.jpg?auto=format%2Ccompress&fit=crop&w=400&h=270" alt="premio recibido">
+                <h3>Doble reconocimiento internacional para Dekton Slim</h3>
+            </a>
+            <p class="main_eighth_section_div_article_p_1">3 diciembre 2019 | Noticias, Top Products</p>
+            <p class="main_eighth_section_div_article_p_2">El revolucionario grosor de tan solo 4 mm, Dekton® Slim, ha sido nombrado ganador en la competición anual de</p><!--AFTER […]-->
+            <a class="main_eighth_section_div_article_a_2" href="https://www.cosentino.com/es/noticias/doble-reconocimiento-internacional-para-dekton-slim/">
+                <span class="div_a">Leer más</span>
+            </a>
+        </article>
+        <article class="main_eighth_section_div_article"> <!-- Todo en A no -->
+            <a class="main_eighth_section_div_article_a_1" href="https://www.cosentino.com/es/noticias/doble-reconocimiento-internacional-para-dekton-slim/">
+                <img src="https://icosentino.imgix.net/es/wp-content/uploads/2019/12/renovar-bano.jpg?auto=format%2Ccompress&fit=crop&w=400&h=270" alt="premio recibido">
+                <h3>¿Quieres renovar tu baño? Te damos 5 ideas</h3>
+            </a>
+            <p class="main_eighth_section_div_article_p_1">3 diciembre 2019 | Top Trends</p> <!--AFTER | -->
+            <p class="main_eighth_section_div_article_p_2">¿Sabías que el baño se ha convertido en la estancia del hogar más renovada entre los particulares de Houzz</p> <!--AFTER […]-->
+            <a class="main_eighth_section_div_article_a_2" href="https://www.cosentino.com/es/noticias/doble-reconocimiento-internacional-para-dekton-slim/">
+                <span class="div_a">Leer más</span>
+            </a>
+        </article>
+    </section>
+</main>
+<footer class="border">
+    <div class="margin">
+        <ul class="display">
+            <li class="li_width">
+                <p onclick="toggleMenu(this)" class="header_p white_text big_size"><b>Compañia</b></p>
+                <ul class="displayed_off">
+                    <li><a class="gray_text" href="">Cosentino</a></li>
+                    <li><a class="gray_text" href="">Seguridad de Cosentino</a></li>
+                    <li><a class="gray_text" href="">Espacio Safety Cosentino</a></li>
+                    <li><a class="gray_text" href="">Plataforma de Responsabilidad Social Corporativa</a></li>
+                    <li><a class="gray_text" href="">Informe de Reponsabilidad Social Corporativa</a></li>
+                    <li><a class="gray_text" href="">I+D e Innovación</a></li>
+                    <li><a class="gray_text" href="">Instituto Silestone</a></li></li>
+                    <li><a class="gray_text" href="">Eduarda Justo Foundation</a></li>
+                </ul>
+            </li>
+            <li class="li_width">
+                <p onclick="toggleMenu(this)" class="header_p white_text big_size"><b>Area profesional</b></p>
+                <ul class="displayed_off">
+                    <li><a class="gray_text" href="">Area profesional</a></li>
+                    <li><a class="gray_text" href="">Cosentino WE</a></li>
+                    <li><a class="gray_text" href="">Cosentino Center</a></li>
+                    <li><a class="gray_text" href="">Cosentino City</a></li>
+                </ul>
+            </li>
+            <li class="li_width">
+                <p onclick="toggleMenu(this)" class="header_p white_text big_size"><b>Empleo</b></p>
+                <ul class="displayed_off">
+                    <li><a class="gray_text" href="">Únete a Consentino</a></li>
+                    <li><a class="gray_text" href="">People</a></li>
+                    <li><a class="gray_text" href="">Misión, Visión & Valores</a></li>
+                    <li><a class="gray_text" href="">Nuestro ADN</a></li>
+                    <li><a class="gray_text" href="">Nuestras Personas</a></li>
+                    <li><a class="gray_text" href="">Proceso de Selección</a></li>
+                </ul>
+            </li>
+            <li class="li_width">
+                <p onclick="toggleMenu(this)" class="header_p white_text big_size"><b>Atención al cliente</b></p>
+                <ul class="displayed_off">
+                    <li><a class="gray_text" href="">Contacto</a></li>
+                    <li><a class="gray_text" href="">Garantía</a></li>
+                    <li><a class="gray_text" class="gray_text" href="">Condiciones generales de compra</a></li>
+                </ul>
+            </li>
+            <li class="li_width">
+                <p onclick="toggleMenu(this)" class="header_p white_text big_size"><b>More info</b></p>
+                <ul class="displayed_off">
+                    <li><a class="gray_text" href="">Aviso legal</a></li>
+                    <li><a class="gray_text" href="">Política de privacidad</a></li>
+                    <li><a class="gray_text" href="">Política de cookies</a></li>
+                    <li><a class="gray_text" href="">Política de Calidad y Medio Ambiente</a></li>
+                    <li><a class="gray_text" href="">Canal de Denuncia</a></li>
+                    <li><a class="gray_text" href="">Código de Ética, Conducta y Cumplimiento Normativo (Rev, 02/2017)</a></li>
+                </ul>
+            </li>
+            <li class="li_width">
+                <p onclick="toggleMenu(this)" class="header_p white_text big_size"><b>Recursos</b></p>
+                <ul class="displayed_off">
+                    <li><a class="gray_text" href="">Descargas</a></li>
+                    <li><a class="gray_text" href="">C Magazine</a></li>
+                    <li><a class="gray_text" href="">Online Visualizer</a></li>
+                    <li><a class="gray_text" href="">App Silestone</a></li>
+                    <li><a class="gray_text" href="">App Dekton</a></li>
+                    <li><a class="gray_text" href="">App Home Design</a></li>
+                    <li><a class="gray_text" href="">App Silestone 25</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="footer_down">
+            <p class="rights rights_color"><b>Cosentino S.A. All rights reserved</b></p> <!--BEFORE ©-->
+            <ul class="social_media"><!--Title: cuando te pones por encima-->
+                <li class="social_media_links"><a href="https://www.facebook.com/GrupoCosentino" title="Facebook" class="social_media_link">
+                        <img src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconFacebook.png?auto=format%2Ccompress&fit=crop" class="social_media_link_img" alt="Facebook">
+                        Facebook
+                    </a>
+                </li>
+                <li class="social_media_links"><a href="https://twitter.com/grupocosentino" title="Twitter" class="social_media_link">
+                        <img src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/inconTwitter.png?auto=format%2Ccompress&fit=crop" class="social_media_link_img" alt="Twitter">
+                        Twitter
+                    </a>
+                </li>
+                <li class="social_media_links"><a href="https://www.instagram.com/grupocosentino/" title="Instagram" class="social_media_link">
+                        <img src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconInstagram.png?auto=format%2Ccompress&fit=crop" class="social_media_link_img" alt="Instagram">
+                        Instagram
+                    </a>
+                </li>
+                <li class="social_media_links"><a href="https://www.pinterest.es/grupocosentino/" title="Cosentino Group" class="social_media_link">
+                        <img src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconPinterest.png?auto=format%2Ccompress&fit=crop" class="social_media_link_img" alt="CosentinoGroup">
+                        CosentinoGroup
+                    </a>
+                </li>
+                <li class="social_media_links"><a href="https://www.youtube.com/user/CosentinoTV" title="Youtube" class="social_media_link">
+                        <img src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconYoutube.png?auto=format%2Ccompress&fit=crop" class="social_media_link_img" alt="Youtube">
+                        Youtube
+                    </a>
+                </li>
+                <li class="social_media_links"><a href="https://www.linkedin.com/company/cosentino/" title="LinkedIn" class="social_media_link">
+                        <img src="https://icosentino.imgix.net/es/wp-content/uploads/2019/07/iconLinkedin.png?auto=format%2Ccompress&fit=crop" class="social_media_link_img" alt="LinkedIn">
+                        LinkedIn
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script></script>
+</footer>
+</body>
+</html>
+

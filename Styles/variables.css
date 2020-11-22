@@ -1,0 +1,32 @@
+:root{
+    --black_primary_color: #1B1B1B;
+    --white_primary_color: #C6CDCD;
+    --gray_primary_color: #5C5C5C;
+    --gray_intense_color: rgba(255,255,255,.8);
+    --main_gray_color: #4d4d4d;
+    --gray_super_light_color: #DCDCDC;
+    --footer_normal_font: 'Montserrat', sans-serif;
+    --big_font_size: 1.4rem;
+    --super_big_font_size: 2rem;
+    --medium_font_size: 1.2rem;
+    --normal_font_size: 1rem;
+    --small_font_size: .9rem;
+    --main_normal_font: 'Source Sans Pro', sans-serif;
+    /*--gray_hover_header_color: rgba(255,255,255,.5);*/
+    --main_gray_background_color: #F5F5F5;
+    --page_max_width: 1920px;
+    --body_max_width: 1750px;
+    --mobile_min_width: 1200px;
+    --header_main_font: 'Open Sans', sans-serif;
+    --white: white;
+    --blog_font: 'Noto Sans JP', sans-serif;
+    --header_top_border_font_color: #DCDCDC;
+    --header_normal_font: 'Source Sans Pro', sans-serif;
+}
+
+
+
+footer{
+    --footer_background_color: #1B1B1B;
+    --footer_font_size: 1rem;
+}

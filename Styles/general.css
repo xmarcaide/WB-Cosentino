@@ -1,0 +1,14 @@
+li{
+    list-style-type: none;
+}
+ul{
+    padding: 0;
+}
+body{
+    margin: 0;
+}
+footer{
+    background-color: var(--footer_background_color);
+    font-family: var(--footer_normal_font);
+    font-size: var(--footer_font_size);
+}
